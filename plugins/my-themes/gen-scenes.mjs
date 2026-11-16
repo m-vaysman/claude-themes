@@ -2,7 +2,7 @@
 // Run from the repository root: node plugins/my-themes/gen-scenes.mjs
 import fs from 'fs'
 
-const IDS = ['desert', 'festive', 'moon', 'ancient-japan', 'tsunami', 'starry-night']
+const IDS = ['desert', 'festive', 'moon', 'ancient-japan', 'tsunami', 'starry-night', 'solar-system']
 
 const body = IDS.map(id => {
   const svg = fs.readFileSync(`previews/${id}-backdrop.svg`, 'utf8').replace(/\r\n/g, '\n')

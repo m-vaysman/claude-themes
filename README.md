@@ -4,12 +4,13 @@ Animated backdrops for the Claude desktop window. Each theme is its own plugin, 
 
 ## my-themes (the switcher)
 
-One plugin that holds all six themes below and lets you pick by name. Install it once, then type:
+One plugin that holds all seven themes below and lets you pick by name. Install it once, then type:
 
 ```
 /my-theme list
 /my-theme tsunami
 /my-theme starry-night
+/my-theme solar-system
 /my-theme off
 ```
 
@@ -59,7 +60,7 @@ A deep-space solar system: a pulsing sun, eight planets on slow elliptical orbit
 
 ## Install
 
-Replace `<theme>` with `my-themes` (six of the themes below, switched with `/my-theme`) or any single theme: `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop`, `starry-night-backdrop` or `solar-system-backdrop`.
+Replace `<theme>` with `my-themes` (all seven themes below, switched with `/my-theme`) or any single theme: `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop`, `starry-night-backdrop` or `solar-system-backdrop`.
 
 At the prompt of a terminal session:
 
