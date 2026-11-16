@@ -2,6 +2,7 @@
   "name": "claude-themes",
   "owner": { "name": "m-vaysman" },
   "plugins": [
+    { "name": "my-themes", "source": "./plugins/my-themes" },
     { "name": "desert-backdrop", "source": "./plugins/desert-backdrop" },
     { "name": "festive-backdrop", "source": "./plugins/festive-backdrop" },
     { "name": "moon-backdrop", "source": "./plugins/moon-backdrop" },

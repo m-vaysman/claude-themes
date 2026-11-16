@@ -2,6 +2,19 @@
 
 Animated backdrops for the Claude desktop window. Each theme is its own plugin, and every theme listed here has a preview in `previews/`.
 
+## my-themes (the switcher)
+
+One plugin that holds all six themes below and lets you pick by name. Install it once, then type:
+
+```
+/my-theme list
+/my-theme tsunami
+/my-theme starry-night
+/my-theme off
+```
+
+Your choice is saved and applies to new sessions. Install this one instead of the single themes, because a session keeps only one theme.
+
 ## desert-backdrop
 
 ![desert-backdrop](previews/desert-backdrop.svg)
@@ -40,7 +53,7 @@ A night sky after the famous 1889 painting: winds of brush strokes, two great sw
 
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop` or `starry-night-backdrop`.
+Replace `<theme>` with `my-themes` (all six, switched with `/my-theme`) or any single theme: `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop` or `starry-night-backdrop`.
 
 At the prompt of a terminal session:
 
