@@ -51,7 +51,8 @@ export const register: Register = on => {
   on('session.start', async ($, e, next) => {
     await $.command.register({
       name: 'my-theme',
-      description: 'Pick one of your animated themes by name: /my-theme list, /my-theme <name>, /my-theme off',
+      description: 'Pick one of your animated themes by name',
+      argumentHint: '[list | off | theme name]',
     })
     const saved = await $.store.get(KEY)
     const def = typeof saved === 'string' ? find(saved) : undefined
@@ -61,6 +62,25 @@ export const register: Register = on => {
     }
 
     return next(e)
+  })
+
+  // Typing "/my-theme " lists the theme names right in the prompt box.
+  on('prompt.autocomplete', async ($, e, next) => {
+    const before = e.text.slice(0, e.start).trim()
+    const found = await next(e)
+
+    if (before !== '/my-theme') {
+      return found
+    }
+
+    const word = e.token.toLowerCase()
+    const rows = [
+      ...DEFS.map(d => ({ text: d.id, label: d.id, description: `${d.title}, ${d.mode} window` })),
+      { text: 'list', label: 'list', description: 'Show the theme names' },
+      { text: 'off', label: 'off', description: 'Clear the theme' },
+    ].filter(row => row.text.startsWith(word))
+
+    return { suggestions: [...found.suggestions, ...rows] }
   })
 
   on('command.run', { command: 'my-theme' }, async ($, e) => {
