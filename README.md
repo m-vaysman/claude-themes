@@ -30,11 +30,17 @@ Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a
 
 ![tsunami-backdrop](previews/tsunami-backdrop.svg)
 
-A great curling wave in the spirit of classic Japanese woodblock prints, in Prussian blue and cream, with Mount Fuji and a small boat. Only the spray moves.
+The great wave, redrawn after the famous 1831 Japanese woodblock print: the clawed crest, three boats and Mount Fuji on cream paper, in Prussian blue. Only the spray moves. Made for a light window.
+
+## starry-night-backdrop
+
+![starry-night-backdrop](previews/starry-night-backdrop.svg)
+
+A night sky after the famous 1889 painting: winds of brush strokes, two great swirls, haloed stars and a crescent moon that all turn slowly, over a sleeping village and a cypress.
 
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop` or `tsunami-backdrop`.
+Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop` or `starry-night-backdrop`.
 
 At the prompt of a terminal session:
 
