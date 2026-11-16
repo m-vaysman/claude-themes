@@ -8,6 +8,7 @@
     { "name": "moon-backdrop", "source": "./plugins/moon-backdrop" },
     { "name": "ancient-japan-backdrop", "source": "./plugins/ancient-japan-backdrop" },
     { "name": "tsunami-backdrop", "source": "./plugins/tsunami-backdrop" },
-    { "name": "starry-night-backdrop", "source": "./plugins/starry-night-backdrop" }
+    { "name": "starry-night-backdrop", "source": "./plugins/starry-night-backdrop" },
+    { "name": "solar-system-backdrop", "source": "./plugins/solar-system-backdrop" }
   ]
 }

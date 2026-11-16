@@ -51,9 +51,15 @@ The great wave, redrawn after the famous 1831 Japanese woodblock print: the claw
 
 A night sky after the famous 1889 painting: winds of brush strokes, two great swirls, haloed stars and a crescent moon that all turn slowly, over a sleeping village and a cypress.
 
+## solar-system-backdrop
+
+![solar-system-backdrop](previews/solar-system-backdrop.svg)
+
+A deep-space solar system: a pulsing sun, eight planets on slow elliptical orbits, moons, Saturn's rings, an asteroid belt, a comet and a faint Milky Way, over a dark palette.
+
 ## Install
 
-Replace `<theme>` with `my-themes` (all six, switched with `/my-theme`) or any single theme: `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop` or `starry-night-backdrop`.
+Replace `<theme>` with `my-themes` (six of the themes below, switched with `/my-theme`) or any single theme: `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop`, `starry-night-backdrop` or `solar-system-backdrop`.
 
 At the prompt of a terminal session:
 
