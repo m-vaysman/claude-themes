@@ -36,7 +36,7 @@ const stars = Array.from({ length: 108 }, (_, i) => {
   const x = Math.round(rnd(i) * 1600)
   const y = Math.round(rnd(i + 50) * 900)
   const r = (0.4 + rnd(i + 3) * 1.3).toFixed(2)
-  const d = (rnd(i + 9) * 8).toFixed(2)
+  const d = (rnd(i + 9) * 16).toFixed(2)
   const tint = rnd(i + 21)
   const fill = tint > 0.93 ? '#ffe4c4' : tint > 0.86 ? '#c6d4ff' : '#fff'
   const o = (0.2 + rnd(i + 27) * 0.62).toFixed(2)
@@ -86,19 +86,19 @@ const orbits = [140, 200, 265, 330, 480, 560, 640, 715]
 
 const mercury = `<circle r="4.8" fill="url(#mer)"/><circle cx="-1.4" cy="-0.4" r="0.85" fill="#5c5a56" opacity=".6"/><circle cx="1.5" cy="1.1" r="0.5" fill="#4a4844" opacity=".55"/><circle cx="0.2" cy="-1.5" r="0.4" fill="#6e6b66" opacity=".45"/>${lit(4.8)}`
 
-const venus = `<circle r="7.4" fill="url(#ven)"/><g class="drift" style="animation-duration:26s" fill="#fff6e4" opacity=".3"><ellipse cx="-1.8" cy="-2.1" rx="4" ry="1.05"/><ellipse cx="1.5" cy="0.7" rx="4.6" ry="1.1"/><ellipse cx="-0.4" cy="2.8" rx="3.4" ry="0.85"/></g>${lit(7.4)}<circle r="8.15" fill="none" stroke="#f3e2bc" stroke-width="1.15" opacity=".4"/>`
+const venus = `<circle r="7.4" fill="url(#ven)"/><g class="drift" style="animation-duration:52s" fill="#fff6e4" opacity=".3"><ellipse cx="-1.8" cy="-2.1" rx="4" ry="1.05"/><ellipse cx="1.5" cy="0.7" rx="4.6" ry="1.1"/><ellipse cx="-0.4" cy="2.8" rx="3.4" ry="0.85"/></g>${lit(7.4)}<circle r="8.15" fill="none" stroke="#f3e2bc" stroke-width="1.15" opacity=".4"/>`
 
-const earth = `<circle r="8" fill="url(#ear)"/><g fill="#2f8f4e"><ellipse cx="-2.3" cy="0.3" rx="1.7" ry="3"/><ellipse cx="1.7" cy="-1.1" rx="2.2" ry="1.7"/><ellipse cx="2.1" cy="2.2" rx="1.25" ry="1.6"/><ellipse cx="-0.3" cy="-2.5" rx="1.45" ry="0.95"/></g><ellipse cx="0.1" cy="-6.2" rx="1.9" ry="0.85" fill="#f4fbff" opacity=".92"/><g class="drift" style="animation-duration:16s" fill="#fff" opacity=".7"><ellipse cx="-2.8" cy="-2.2" rx="2.3" ry="0.85"/><ellipse cx="1.5" cy="-0.2" rx="2.6" ry="0.8"/><ellipse cx="-1" cy="2.5" rx="2.1" ry="0.65"/><ellipse cx="3" cy="2" rx="1.5" ry="0.55"/></g>${lit(8)}<circle r="8.7" fill="none" stroke="#9fd4ff" stroke-width="1.15" opacity=".5"/>${moon(14.5, 2.1, 11, '#d5dbe6')}`
+const earth = `<circle r="8" fill="url(#ear)"/><g fill="#2f8f4e"><ellipse cx="-2.3" cy="0.3" rx="1.7" ry="3"/><ellipse cx="1.7" cy="-1.1" rx="2.2" ry="1.7"/><ellipse cx="2.1" cy="2.2" rx="1.25" ry="1.6"/><ellipse cx="-0.3" cy="-2.5" rx="1.45" ry="0.95"/></g><ellipse cx="0.1" cy="-6.2" rx="1.9" ry="0.85" fill="#f4fbff" opacity=".92"/><g class="drift" style="animation-duration:32s" fill="#fff" opacity=".7"><ellipse cx="-2.8" cy="-2.2" rx="2.3" ry="0.85"/><ellipse cx="1.5" cy="-0.2" rx="2.6" ry="0.8"/><ellipse cx="-1" cy="2.5" rx="2.1" ry="0.65"/><ellipse cx="3" cy="2" rx="1.5" ry="0.55"/></g>${lit(8)}<circle r="8.7" fill="none" stroke="#9fd4ff" stroke-width="1.15" opacity=".5"/>${moon(14.5, 2.1, 22, '#d5dbe6')}`
 
 const mars = `<circle r="6.2" fill="url(#mar)"/><ellipse cx="-1.6" cy="-0.4" rx="1.5" ry="1.05" fill="#8f341c" opacity=".55"/><ellipse cx="1.2" cy="1.8" rx="1.7" ry="0.65" fill="#efd0b0" opacity=".4"/><ellipse cx="0.2" cy="-4.7" rx="1.5" ry="0.65" fill="#f6ebe4" opacity=".8"/>${lit(6.2)}`
 
-const jupiter = `<circle r="20" fill="url(#jup)"/><ellipse cx="-6" cy="3.4" rx="5.2" ry="3.1" fill="#c44536"/><ellipse cx="-6.5" cy="3" rx="2.5" ry="1.45" fill="#e07868" opacity=".8"/>${lit(20)}${moon(28, 2, 8, '#e6c99a')}${moon(40, 1.45, 14, '#e7e0d4')}`
+const jupiter = `<circle r="20" fill="url(#jup)"/><ellipse cx="-6" cy="3.4" rx="5.2" ry="3.1" fill="#c44536"/><ellipse cx="-6.5" cy="3" rx="2.5" ry="1.45" fill="#e07868" opacity=".8"/>${lit(20)}${moon(28, 2, 16, '#e6c99a')}${moon(40, 1.45, 28, '#e7e0d4')}`
 
-const saturn = `<g transform="rotate(-22)"><ellipse rx="40" ry="13.5" fill="none" stroke="#e4d5b4" stroke-width="8" opacity=".72"/><ellipse rx="40" ry="13.5" fill="none" stroke="#2a241c" stroke-width="1.35" opacity=".55"/><ellipse rx="46" ry="15.5" fill="none" stroke="#f3ead8" stroke-width="1.1" opacity=".4"/></g><circle r="15" fill="url(#sat)"/><rect x="-11" y="-3.2" width="22" height="1.7" fill="#f4ead4" opacity=".45"/><rect x="-10" y="2.4" width="20" height="1.5" fill="#b8926a" opacity=".4"/>${lit(15)}<g transform="rotate(-22)"><path d="M-40 0 A40 13.5 0 0 1 40 0" fill="none" stroke="#f0e4c8" stroke-width="7.5" stroke-linecap="butt"/><path d="M-40 0 A40 13.5 0 0 1 40 0" fill="none" stroke="#2a241c" stroke-width="1.2" opacity=".5"/><path d="M-46 0 A46 15.5 0 0 1 46 0" fill="none" stroke="#f7f1e4" stroke-width="1.1" opacity=".55"/></g>${moon(52, 2.3, 16, '#e4c49a')}`
+const saturn = `<g transform="rotate(-22)"><ellipse rx="40" ry="13.5" fill="none" stroke="#e4d5b4" stroke-width="8" opacity=".72"/><ellipse rx="40" ry="13.5" fill="none" stroke="#2a241c" stroke-width="1.35" opacity=".55"/><ellipse rx="46" ry="15.5" fill="none" stroke="#f3ead8" stroke-width="1.1" opacity=".4"/></g><circle r="15" fill="url(#sat)"/><rect x="-11" y="-3.2" width="22" height="1.7" fill="#f4ead4" opacity=".45"/><rect x="-10" y="2.4" width="20" height="1.5" fill="#b8926a" opacity=".4"/>${lit(15)}<g transform="rotate(-22)"><path d="M-40 0 A40 13.5 0 0 1 40 0" fill="none" stroke="#f0e4c8" stroke-width="7.5" stroke-linecap="butt"/><path d="M-40 0 A40 13.5 0 0 1 40 0" fill="none" stroke="#2a241c" stroke-width="1.2" opacity=".5"/><path d="M-46 0 A46 15.5 0 0 1 46 0" fill="none" stroke="#f7f1e4" stroke-width="1.1" opacity=".55"/></g>${moon(52, 2.3, 32, '#e4c49a')}`
 
 const uranus = `<g transform="rotate(74)"><ellipse rx="19" ry="4.6" fill="none" stroke="#d7f7f4" stroke-width="1.6" opacity=".7"/></g><circle r="10.4" fill="url(#ura)"/>${lit(10.4)}<g transform="rotate(74)"><path d="M-19 0 A19 4.6 0 0 1 19 0" fill="none" stroke="#e7fffd" stroke-width="1.7" opacity=".8"/></g>`
 
-const neptune = `<circle r="10.2" fill="url(#nep)"/><ellipse cx="-3.2" cy="1.6" rx="2.3" ry="1.35" fill="#0c1848" opacity=".62"/>${lit(10.2)}${moon(16.5, 1.45, 13, '#c9d4ea')}`
+const neptune = `<circle r="10.2" fill="url(#nep)"/><ellipse cx="-3.2" cy="1.6" rx="2.3" ry="1.35" fill="#0c1848" opacity=".62"/>${lit(10.2)}${moon(16.5, 1.45, 26, '#c9d4ea')}`
 
 const rocks = [
   [392, 18, 2.2, '#e0d2c0'],
@@ -106,23 +106,23 @@ const rocks = [
   [374, 210, 1.9, '#cbbba6'],
   [428, 300, 1.55, '#a09080'],
 ]
-  .map(([rad, ang, r, fill]) => orbiting(Number(rad), Number(ang), 70, `<circle r="${r}" fill="${fill}"/>${lit(Number(r))}`))
+  .map(([rad, ang, r, fill]) => orbiting(Number(rad), Number(ang), 140, `<circle r="${r}" fill="${fill}"/>${lit(Number(r))}`))
   .join('')
 
 const SCENE = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
 <style>
-.st{fill:#fff;animation:tw 6s ease-in-out infinite}
+.st{fill:#fff;animation:tw 12s ease-in-out infinite}
 @keyframes tw{0%,100%{opacity:.8}50%{opacity:.18}}
-.corona,.halo{transform-origin:800px 450px;animation:pulse 9s ease-in-out infinite}
-.halo{animation-duration:7s}
+.corona,.halo{transform-origin:800px 450px;animation:pulse 18s ease-in-out infinite}
+.halo{animation-duration:14s}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:.62}50%{transform:scale(1.12);opacity:.9}}
 .spin{transform-box:fill-box;transform-origin:center;animation:spin linear infinite}
 .anti{transform-box:fill-box;transform-origin:center;animation:spin linear infinite reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-.drift{animation:drift 20s ease-in-out infinite alternate}
+.drift{animation:drift 40s ease-in-out infinite alternate}
 @keyframes drift{from{transform:translateX(-1.6px)}to{transform:translateX(1.6px)}}
-.belt{transform-box:fill-box;transform-origin:center;animation:spin 70s linear infinite}
-.comet{animation:comet 34s linear infinite}
+.belt{transform-box:fill-box;transform-origin:center;animation:spin 140s linear infinite}
+.comet{animation:comet 68s linear infinite}
 @keyframes comet{0%,100%{transform:translate(0,0);opacity:.85}7%{opacity:.85}20%{transform:translate(1080px,460px);opacity:0}21%{opacity:0}90%{transform:translate(-40px,-16px);opacity:0}}
 </style>
 <defs>
@@ -155,15 +155,15 @@ ${stars}
 <g transform="translate(800,450) scale(1,${SY})">
 ${orbits}
 <g class="belt"><circle cx="0" cy="0" r="520" fill="rgba(0,0,0,0)"/>${belt}</g>
-${orbiting(140, 20, 18, mercury)}
-${orbiting(200, 155, 28, venus)}
-${orbiting(265, 220, 40, earth)}
-${orbiting(330, 335, 54, mars)}
+${orbiting(140, 20, 36, mercury)}
+${orbiting(200, 155, 56, venus)}
+${orbiting(265, 220, 80, earth)}
+${orbiting(330, 335, 108, mars)}
 ${rocks}
-${orbiting(480, 55, 88, jupiter)}
-${orbiting(560, 200, 118, saturn)}
-${orbiting(640, 105, 150, uranus)}
-${orbiting(715, 300, 190, neptune)}
+${orbiting(480, 55, 176, jupiter)}
+${orbiting(560, 200, 236, saturn)}
+${orbiting(640, 105, 300, uranus)}
+${orbiting(715, 300, 380, neptune)}
 </g>
 <g class="comet"><path d="M292 168 C210 122 130 78 36 42" fill="none" stroke="url(#tail)" stroke-width="2.2" stroke-linecap="round"/><path d="M292 168 C230 138 168 108 88 74" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" opacity=".18"/><circle cx="292" cy="168" r="2.7" fill="#fff"/><circle cx="292" cy="168" r="6.5" fill="#fff" opacity=".28"/></g>
 </svg>`
