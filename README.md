@@ -26,6 +26,18 @@ A moonlit night: a softly glowing moon, drifting clouds, twinkling stars, an occ
 
 Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a samurai with a waving banner, a vermilion torii gate, and drifting mist, over an indigo palette with lacquer-red accents.
 
+## tsunami-backdrop
+
+![tsunami-backdrop](previews/tsunami-backdrop.svg)
+
+The great wave, redrawn after the famous 1831 Japanese woodblock print: the clawed crest, three boats and Mount Fuji on cream paper, in Prussian blue. Only the spray moves. Made for a light window.
+
+## starry-night-backdrop
+
+![starry-night-backdrop](previews/starry-night-backdrop.svg)
+
+A night sky after the famous 1889 painting: winds of brush strokes, two great swirls, haloed stars and a crescent moon that all turn slowly, over a sleeping village and a cypress.
+
 ## solar-system-backdrop
 
 ![solar-system-backdrop](previews/solar-system-backdrop.svg)
@@ -34,7 +46,7 @@ A deep-space solar system: a pulsing sun, eight planets on slow elliptical orbit
 
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop` or `solar-system-backdrop`.
+Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop`, `tsunami-backdrop`, `starry-night-backdrop` or `solar-system-backdrop`.
 
 At the prompt of a terminal session:
 
