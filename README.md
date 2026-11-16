@@ -26,9 +26,15 @@ A moonlit night: a softly glowing moon, drifting clouds, twinkling stars, an occ
 
 Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a samurai with a waving banner, a vermilion torii gate, and drifting mist, over an indigo palette with lacquer-red accents.
 
+## tsunami-backdrop
+
+![tsunami-backdrop](previews/tsunami-backdrop.svg)
+
+A great curling wave in the spirit of classic Japanese woodblock prints, in Prussian blue and cream, with Mount Fuji and a small boat. Only the spray moves.
+
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop` or `ancient-japan-backdrop`.
+Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop` or `tsunami-backdrop`.
 
 At the prompt of a terminal session:
 
