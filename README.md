@@ -20,9 +20,15 @@ A winter night: falling snow, twinkling multicolor lights, snowy evergreens and 
 
 A moonlit night: a softly glowing moon, drifting clouds, twinkling stars, an occasional shooting star and a deep blue palette.
 
+## ancient-japan-backdrop
+
+![ancient-japan-backdrop](previews/ancient-japan-backdrop.svg)
+
+Ancient Japan at dawn in ink-wash layers: Mount Fuji, a pagoda, a vermilion torii gate, drifting mist and falling cherry petals, over an indigo palette with lacquer-red accents.
+
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop` or `moon-backdrop`.
+Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop` or `ancient-japan-backdrop`.
 
 At the prompt of a terminal session:
 
