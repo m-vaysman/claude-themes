@@ -5,6 +5,7 @@
     { "name": "desert-backdrop", "source": "./plugins/desert-backdrop" },
     { "name": "festive-backdrop", "source": "./plugins/festive-backdrop" },
     { "name": "moon-backdrop", "source": "./plugins/moon-backdrop" },
-    { "name": "ancient-japan-backdrop", "source": "./plugins/ancient-japan-backdrop" }
+    { "name": "ancient-japan-backdrop", "source": "./plugins/ancient-japan-backdrop" },
+    { "name": "solar-system-backdrop", "source": "./plugins/solar-system-backdrop" }
   ]
 }

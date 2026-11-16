@@ -26,9 +26,15 @@ A moonlit night: a softly glowing moon, drifting clouds, twinkling stars, an occ
 
 Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a samurai with a waving banner, a vermilion torii gate, and drifting mist, over an indigo palette with lacquer-red accents.
 
+## solar-system-backdrop
+
+![solar-system-backdrop](previews/solar-system-backdrop.svg)
+
+A deep-space solar system: a pulsing sun, eight planets on slow elliptical orbits, moons, Saturn's rings, an asteroid belt, a comet and a faint Milky Way, over a dark palette.
+
 ## Install
 
-Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop` or `ancient-japan-backdrop`.
+Replace `<theme>` with `desert-backdrop`, `festive-backdrop`, `moon-backdrop`, `ancient-japan-backdrop` or `solar-system-backdrop`.
 
 At the prompt of a terminal session:
 
