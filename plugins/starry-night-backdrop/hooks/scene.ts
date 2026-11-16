@@ -3,6 +3,10 @@
 type Eddy = { x: number; y: number; r: number }
 type Star = { x: number; y: number; s: number; core: string }
 
+// Everything turns at 30% of its first speed: 70% slower.
+const SLOW = 1 / 0.3
+const secs = (s: number) => (s * SLOW).toFixed(0)
+
 const rnd = (n: number): number => {
   const x = Math.sin(n * 127.1 + 311.7) * 43758.5453
   return x - Math.floor(x)
@@ -62,7 +66,7 @@ const wind = Array.from({ length: 21 }, (_, j) => {
   const main = low ? GLOW[j % 3] : BLUES[j % 5]
   const light = low ? '#f6f0cf' : LIGHTS[j % 4]
   const dur = 90 + (j % 5) * 14
-  return `<path class="f" d="${d}" stroke="${main}" stroke-width="14" stroke-dasharray="${DASHES[j % 4]}" style="animation-duration:${dur}s"/><path class="f" d="${d}" transform="translate(0 10)" stroke="${light}" stroke-width="5" stroke-dasharray="${DASHES[(j + 2) % 4]}" style="animation-duration:${dur + 30}s"/>`
+  return `<path class="f" d="${d}" stroke="${main}" stroke-width="14" stroke-dasharray="${DASHES[j % 4]}" style="animation-duration:${secs(dur)}s"/><path class="f" d="${d}" transform="translate(0 10)" stroke="${light}" stroke-width="5" stroke-dasharray="${DASHES[(j + 2) % 4]}" style="animation-duration:${secs(dur + 30)}s"/>`
 }).join('')
 
 // ── Swirls: spiral arms that turn as one ─────────────────────────────────────
@@ -76,8 +80,8 @@ const arm = (R: number, turns: number, phase: number) => {
   return `M${pts.join('L')}`
 }
 
-const swirl = (e: Eddy, spin: string, secs: number, eye: string) =>
-  `<g transform="translate(${e.x} ${e.y})"><circle r="${e.r}" fill="url(#eddy)"/><g class="${spin}" style="animation-duration:${secs}s" fill="none" stroke-linecap="round" stroke-linejoin="round">` +
+const swirl = (e: Eddy, spin: string, seconds: number, eye: string) =>
+  `<g transform="translate(${e.x} ${e.y})"><circle r="${e.r}" fill="url(#eddy)"/><g class="${spin}" style="animation-duration:${secs(seconds)}s" fill="none" stroke-linecap="round" stroke-linejoin="round">` +
   `<path d="${arm(e.r, 3, 0)}" stroke="#a9c8ec" stroke-width="15" stroke-dasharray="40 16"/>` +
   `<path d="${arm(e.r, 3, 2.1)}" stroke="#4f80d2" stroke-width="15" stroke-dasharray="52 18"/>` +
   `<path d="${arm(e.r, 3, 4.2)}" stroke="#f1e7b4" stroke-width="9" stroke-dasharray="30 22"/>` +
@@ -85,20 +89,20 @@ const swirl = (e: Eddy, spin: string, secs: number, eye: string) =>
   `<circle r="13" fill="${eye}" stroke="none"/></g></g>`
 
 // ── Stars and the moon: a bright core inside rings of dashes that turn ───────
-const ring = (r: number, color: string, width: number, spin: string, secs: number) => {
+const ring = (r: number, color: string, width: number, spin: string, seconds: number) => {
   const round = 2 * Math.PI * r
   const n = Math.max(5, Math.round(round / 30))
   const step = round / n
-  return `<circle class="${spin}" r="${r}" stroke="${color}" stroke-width="${width}" stroke-dasharray="${(step * 0.66).toFixed(1)} ${(step * 0.34).toFixed(1)}" style="animation-duration:${secs}s"/>`
+  return `<circle class="${spin}" r="${r}" stroke="${color}" stroke-width="${width}" stroke-dasharray="${(step * 0.66).toFixed(1)} ${(step * 0.34).toFixed(1)}" style="animation-duration:${secs(seconds)}s"/>`
 }
 
 const stars = STARS.map((s, i) => {
-  const secs = 70 + (i % 4) * 16
+  const base = 70 + (i % 4) * 16
   return (
     `<g transform="translate(${s.x} ${s.y}) scale(${s.s})" fill="none" stroke-linecap="round"><circle r="56" fill="#2c56b4" opacity=".55"/>` +
-    ring(46, '#5f8fdc', 9, 'cw', secs + 30) +
-    ring(33, '#d6e2c4', 8, 'ccw', secs) +
-    ring(21, '#f2c94c', 8, 'cw', secs - 20) +
+    ring(46, '#5f8fdc', 9, 'cw', base + 30) +
+    ring(33, '#d6e2c4', 8, 'ccw', base) +
+    ring(21, '#f2c94c', 8, 'cw', base - 20) +
     `<circle r="12" fill="${s.core}"/></g>`
   )
 }).join('')
