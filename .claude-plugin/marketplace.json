@@ -1,0 +1,5 @@
+{
+  "name": "claude-themes",
+  "owner": { "name": "m-vaysman" },
+  "plugins": [{ "name": "desert-backdrop", "source": "./" }]
+}
