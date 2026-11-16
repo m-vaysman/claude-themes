@@ -41,6 +41,11 @@ export const register: Register = on => {
   })
 
   on('ui.render', { component: 'Backdrop' }, ($, e, next) => {
+    // Several themes can be installed at once: draw only when this one is the chosen scene.
+    if (String(e.props.scene) !== 'starry-night') {
+      return next(e)
+    }
+
     if (e.surface !== 'desktop' && e.surface !== 'mobile') {
       return next(e)
     }
