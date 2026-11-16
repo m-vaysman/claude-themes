@@ -29,14 +29,6 @@ const rnd = (n: number) => {
   return x - Math.floor(x)
 }
 
-const petals = Array.from({ length: 34 }, (_, i) => {
-  const x = Math.round(rnd(i) * 1600)
-  const dur = (10 + rnd(i + 7) * 12).toFixed(1)
-  const delay = (-rnd(i + 31) * 22).toFixed(1)
-  const s = (0.6 + rnd(i + 19) * 0.9).toFixed(2)
-  return `<g transform="translate(${x} -20)"><g class="p ${i % 2 ? 'a' : 'b'}" style="animation-duration:${dur}s;animation-delay:${delay}s"><ellipse rx="${(7 * Number(s)).toFixed(1)}" ry="${(4 * Number(s)).toFixed(1)}" fill="#f4b8c4" opacity=".85"/></g></g>`
-}).join('')
-
 const tier = (i: number) => {
   const y = -i * 40
   const w = 74 - i * 10
@@ -49,10 +41,6 @@ const samurai = `<g transform="translate(720 742)" fill="#05080f"><path d="M-30 
 
 const SCENE = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
 <style>
-.p{animation:fall linear infinite}
-.p.a{animation-name:fa}.p.b{animation-name:fb}
-@keyframes fa{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(60px,520px) rotate(180deg)}100%{transform:translate(-20px,1040px) rotate(360deg)}}
-@keyframes fb{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(-60px,520px) rotate(-180deg)}100%{transform:translate(20px,1040px) rotate(-360deg)}}
 .m1{animation:mist 50s ease-in-out infinite alternate}
 .m2{animation:mist 80s ease-in-out infinite alternate-reverse}
 @keyframes mist{from{transform:translateX(-80px)}to{transform:translateX(80px)}}
@@ -77,7 +65,6 @@ ${pagoda}
 <g stroke="#0b101d" stroke-width="22" fill="none" stroke-linecap="round"><path d="M1480 900 Q1470 780 1500 700 Q1520 640 1470 600"/></g>
 <g fill="#f4b8c4" opacity=".9"><circle cx="1470" cy="596" r="16"/><circle cx="1448" cy="618" r="13"/><circle cx="1494" cy="612" r="14"/><circle cx="1470" cy="574" r="11"/></g>
 ${samurai}
-${petals}
 </svg>`
 
 export const register: Register = on => {
@@ -98,6 +85,6 @@ export const register: Register = on => {
 
     const { Svg } = $.ui.resolve(e)
 
-    return <Svg source={SCENE} alt="Ancient Japan at dawn: Mount Fuji, a pagoda, a samurai, a torii gate, mist and falling cherry petals" isInteractive />
+    return <Svg source={SCENE} alt="Ancient Japan at dawn: Mount Fuji, a pagoda, a samurai, a torii gate and mist" isInteractive />
   })
 }

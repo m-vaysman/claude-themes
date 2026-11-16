@@ -24,7 +24,7 @@ A moonlit night: a softly glowing moon, drifting clouds, twinkling stars, an occ
 
 ![ancient-japan-backdrop](previews/ancient-japan-backdrop.svg)
 
-Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a samurai with a waving banner, a vermilion torii gate, drifting mist and falling cherry petals, over an indigo palette with lacquer-red accents.
+Ancient Japan at dawn in ink-wash layers: Mount Fuji, a tall five-tier pagoda, a samurai with a waving banner, a vermilion torii gate, and drifting mist, over an indigo palette with lacquer-red accents.
 
 ## Install
 
